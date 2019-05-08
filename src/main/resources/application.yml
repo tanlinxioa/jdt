@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: jdt
+  datasource:
+    jdbc-url: jdbc:mysql://173.242.117.120:3306/JDT?characterEncoding=UTF-8
+    username: test
+    password: Tlx@2019
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    validation-query: SELECT 1 FROM DUAL
+    test-while-idle: true
+    time-between-eviction-runs-millis: 3600000
+    min-evictable-idle-time-millis: 18000000
+    minimum-idle: 5
+    maximum-pool-size: 25
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+#  jackson:
+#    serialization: true
+#    deserialization: true
+
+server:
+  port: 9088
+
+mybatis:
+  mapper-locations: classpath:mysql/*.xml
+logging:
+  level:
+    root: error
+    org.springframework.web: debug
